@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆形圆"
+        fresco:layout_constraintTop_toTopOf="parent"
+        fresco:layout_constraintLeft_toLeftOf="parent"
+        fresco:layout_constraintRight_toLeftOf="@id/circle"
+        />
+
+    <Button
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆角：20f"
+        fresco:layout_constraintTop_toTopOf="@id/round"
+        fresco:layout_constraintLeft_toRightOf="@id/round"
+        fresco:layout_constraintRight_toLeftOf="@id/ratio"
+        />
+
+    <Button
+        android:id="@+id/ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="宽高比：2.71"
+        fresco:layout_constraintTop_toTopOf="@id/round"
+        fresco:layout_constraintLeft_toRightOf="@id/circle"
+        fresco:layout_constraintRight_toLeftOf="@id/loadgif"
+        />
+
+    <Button
+        android:id="@+id/loadgif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载动图"
+        fresco:layout_constraintTop_toTopOf="parent"
+        fresco:layout_constraintLeft_toRightOf="@id/ratio"
+        fresco:layout_constraintRight_toRightOf="parent"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/my_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:layout_constraintTop_toBottomOf="@id/round"
+        fresco:layout_constraintLeft_toLeftOf="parent"
+        fresco:layout_constraintRight_toRightOf="parent"
+        fresco:layout_constraintBottom_toTopOf="@id/zhu"
+        />
+    <Button
+        android:id="@+id/zhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取注解的值"
+        fresco:layout_constraintTop_toBottomOf="@id/my_image_view"
+        fresco:layout_constraintLeft_toLeftOf="parent"
+        fresco:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/fan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="反射添加集合"
+        fresco:layout_constraintTop_toBottomOf="@id/zhu"
+        fresco:layout_constraintLeft_toLeftOf="parent"
+        fresco:layout_constraintRight_toRightOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>
